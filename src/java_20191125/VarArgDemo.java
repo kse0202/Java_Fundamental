@@ -16,6 +16,6 @@ public class VarArgDemo {
 		v.m(1);
 		v.m(1,2);
 		v.m(1,2,3);
-		//git test
+		//git test....학원에서 pull하기
 	}
 }
