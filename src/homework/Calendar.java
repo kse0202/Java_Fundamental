@@ -1,25 +1,34 @@
 package homework;
 
 public class Calendar {
-	static int[] monthArray = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+	int[] monthArray = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 	
-	
-	
-	public void printDayOfWeek(int year, int month, int day){
-		String message = null;
-	
+	public boolean isLeafYear(int year){
 		if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public int getTotalDays(int year, int month, int day){
+		//윤달인가?
+		if ( isLeafYear(year) == true) {
 			monthArray[1] = 29;
 		}
-	
+		
+		//month의 이전 달까지의 일수
 		int monthDays = 0;
 		for (int i = 0; i < month - 1; i++) {
 			monthDays += monthArray[i];
 
 		}
-		int totalDays = (year - 1) * 365 + (year / 4 - year / 100 + year / 400)
+		return (year - 1) * 365 + (year / 4 - year / 100 + year / 400)
 				+ monthDays + day;
-		switch (totalDays % 7) {
+	}
+	
+	public String getDayOfWeek(int getTotalDays){
+		String message = null;
+		switch (getTotalDays % 7) {
 		case 0:
 			message = "일요일";
 			break;
@@ -46,11 +55,29 @@ public class Calendar {
 			break;
 		}
 
-		System.out.printf("%d년 %d월 %d일 %s 입니다.", year, month, day, message);
+		return message;
+		
+	}
+	public void getBlank(int totalDays){
+		if (totalDays % 7 == 0) {
+			System.out.printf("\t\t\t\t\t\t");
+		} else if (totalDays % 7 == 1) {
+			System.out.printf("");
+		} else if (totalDays % 7 == 2) {
+			System.out.printf("\t");
+		} else if (totalDays % 7 == 3) {
+			System.out.printf("\t\t");
+		} else if (totalDays % 7 == 4) {
+			System.out.printf("\t\t\t");
+		} else if (totalDays % 7 == 5) {
+			System.out.printf("\t\t\t\t");
+		} else if (totalDays % 7 == 6) {
+			System.out.printf("\t\t\t\t\t");
+		}
 		
 	}
 	public static void main(String[] args) {
-		
+	
 
 	}
 
