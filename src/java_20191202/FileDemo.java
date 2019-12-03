@@ -23,6 +23,7 @@ public class FileDemo {
 		int day = c.get(Calendar.DATE);
 		
 		System.out.printf("%d 년  %d 월 %d 일", year, month, day);
+		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd a hh:mm:ss E요일");
 		String date = sdf.format(c.getTime());
 		System.out.println(date);
