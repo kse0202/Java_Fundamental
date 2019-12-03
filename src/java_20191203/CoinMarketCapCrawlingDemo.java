@@ -32,7 +32,7 @@ public class CoinMarketCapCrawlingDemo {
 		Elements elements = doc.select(".cmc-table__table-wrapper-outer table tbody tr"); //연결할데서 가지고 올 데이터가 있는 영역 설정
 		System.out.println("Date\tOpen\tHigh\tLow\tClose\tVolume\tCap"); //이건 콘솔에 띄울 제목들....
 		
-		//c:\dec\io\2019\12\crawling.txt = >저장하기
+		//c:\dev\io\2019\12\crawling.txt = >저장하기
 		
 		try {
 			//네트워크에서 가져온 데이터를 사용할 거라서 FileWriter, bufferedReader가 필요 없다. 이건 파일 읽을 때 사용.
