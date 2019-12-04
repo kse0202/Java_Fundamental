@@ -4,11 +4,9 @@ public class Calendar {
 	int[] monthArray = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 	
 	public boolean isLeafYear(int year){
-		if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
-			return true;
-		}else{
-			return false;
-		}
+		return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
+			
+		
 	}
 	public int getTotalDays(int year, int month, int day){
 		//윤달인가?
@@ -59,21 +57,10 @@ public class Calendar {
 		
 	}
 	public void getBlank(int totalDays){
-		if (totalDays % 7 == 0) {
-			System.out.printf("\t\t\t\t\t\t");
-		} else if (totalDays % 7 == 1) {
-			System.out.printf("");
-		} else if (totalDays % 7 == 2) {
-			System.out.printf("\t");
-		} else if (totalDays % 7 == 3) {
-			System.out.printf("\t\t");
-		} else if (totalDays % 7 == 4) {
-			System.out.printf("\t\t\t");
-		} else if (totalDays % 7 == 5) {
-			System.out.printf("\t\t\t\t");
-		} else if (totalDays % 7 == 6) {
-			System.out.printf("\t\t\t\t\t");
+		for (int i = 0; i < (totalDays % 7); i++) {
+			System.out.print("\t");
 		}
+
 		
 	}
 	public static void main(String[] args) {
