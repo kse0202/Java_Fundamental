@@ -18,7 +18,7 @@ public class FileInOutputStreamDemo {
 			//while ((readByte = fis.read()) != -1) {
 			//	fos.write(readByte);
 			//}
-			byte[] readBytes = new byte[2014*8];
+			byte[] readBytes = new byte[1024*8];
 			int readByteCount = 0;
 			//fis.read(readBytes) : 1024바이트 읽어서 readBytes에 저장하고 읽은 바이트 수를 반환한다.
 			long start =System.currentTimeMillis();
