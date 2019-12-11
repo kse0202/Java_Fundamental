@@ -144,8 +144,8 @@ public class SalGradeDao {
 			
 			StringBuffer sql = new StringBuffer();
 			sql.append("SELECT grade, losal, hisal ");
-			sql.append("FROM salGrade ");
-			sql.append("ORDER BY salGrade");
+			sql.append("FROM salgrade ");
+			sql.append("ORDER BY grade");
 			
 			pstmt = con.prepareStatement(sql.toString());
 			rs = pstmt.executeQuery();

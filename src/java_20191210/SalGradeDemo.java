@@ -20,7 +20,7 @@ public class SalGradeDemo {
 		
 		ArrayList<SalGradeDto> list = s.select();
 		for (SalGradeDto dto : list) {
-			System.out.printf("%d, %d, %d", dto.getGrade(), dto.getLosal(), dto.getHisal());
+			System.out.printf("%d, %d, %d %n", dto.getGrade(), dto.getLosal(), dto.getHisal());
 			
 		}
 		
