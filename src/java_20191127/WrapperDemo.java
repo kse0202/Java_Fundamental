@@ -26,6 +26,12 @@ public class WrapperDemo {
 		
 		//문자열을 int로 바꿀때!!!!
 		int d = Integer.parseInt("100"); 
+		String temp = "12.35";
+		double d4 = Double.valueOf(temp); //오토 언박싱 에러가 안난다
+		double d5 = 45.12;
+		System.out.println(d4+d5);
+		double d6 = Double.parseDouble(temp);
+		System.out.println(d5+d6);
 		
 	}
 
